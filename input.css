@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* ─── Custom Theme (Tailwind v4 CSS-first config) ─── */
+@theme {
+  --animate-fade-up:     fadeUp 0.8s ease-out both;
+  --animate-fade-up-d1:  fadeUp 0.8s 0.10s ease-out both;
+  --animate-fade-up-d2:  fadeUp 0.8s 0.20s ease-out both;
+  --animate-fade-up-d3:  fadeUp 0.8s 0.30s ease-out both;
+  --animate-fade-up-d4:  fadeUp 0.8s 0.40s ease-out both;
+  --animate-fade-up-d5:  fadeUp 0.8s 0.50s ease-out both;
+  --animate-fade-up-d6:  fadeUp 0.8s 0.60s ease-out both;
+  --animate-fade-in:     fadeIn 0.8s ease-out both;
+  --animate-fade-in-d1:  fadeIn 0.8s 0.15s ease-out both;
+  --animate-fade-in-d2:  fadeIn 0.8s 0.30s ease-out both;
+  --animate-scale-up:    scaleUp 0.9s ease-out both;
+  --animate-scale-up-d1: scaleUp 0.9s 0.15s ease-out both;
+}
+
+@keyframes fadeUp {
+  0%   { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  0%   { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Nav underline effect ─── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 1.5px;
+  width: 0;
+  background-color: #1e293b;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Column break avoidance ─── */
+.avoid-break {
+  break-inside: avoid;
+}
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #f8fafc; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
