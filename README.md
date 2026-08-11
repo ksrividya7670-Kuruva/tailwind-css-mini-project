@@ -161,13 +161,5 @@ All colors use Tailwind's default palette (`emerald`, `slate`, `amber`, `rose`, 
 | `lg:`      | ≥ 1024px | 3–4 column grids, bento layout          |
 
 ---
-
-## 📄 License
-
-This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-
-<p align="center">
-  Made with 🌿 for the Greenwood community
-</p>
+ 
+ 
